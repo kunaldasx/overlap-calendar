@@ -124,7 +124,7 @@ export function WelcomeScreen() {
           <div className="mb-8 lg:mb-12">
             <div className="mb-6">
               <h1 className="bg-linear-to-r from-primary to-primary/60 bg-clip-text font-bold text-4xl text-transparent lg:text-5xl">
-                Issho
+                TimeMesh
               </h1>
               <p className="mt-3 text-lg text-muted-foreground">
                 Plan with friends faster — mark availability and find the best

@@ -1,7 +1,7 @@
-# Issho: Plan with friends, faster
+# TimeMesh: Plan with friends, faster
 
 <div align="center">
-  <a href="https://issho.dulapahv.dev/">
+  <a href="https://TimeMesh.kunaldasxv.dev/">
     <img src="public/cover.png" width="630" alt="codex cover image"/>
   </a>
 </div>
@@ -9,14 +9,14 @@
 <br />
 
 <div align="center">
-  <a href="https://github.com/dulapahv/Issho/issues"><img src="https://img.shields.io/github/issues/dulapahv/Issho.svg?style=flat" />
+  <a href="https://github.com/kunaldasxv/TimeMesh/issues"><img src="https://img.shields.io/github/issues/kunaldasxv/TimeMesh.svg?style=flat" />
 </div>
 
 <br />
 
-✨ **Try now at [issho.dulapahv.dev](https://issho.dulapahv.dev)**
+✨ **Try now at [TimeMesh.kunaldasxv.dev](https://TimeMesh.kunaldasxv.dev)**
 
-Issho (一緒) means "together" in Japanese - and that's exactly what this app is about. It's a real-time collaborative calendar that lets you and your friends visually mark your availability and instantly find the perfect time to meet, without the endless back-and-forth messages, polls, or creating yet another account.
+TimeMesh is a real-time collaborative calendar that lets you and your friends visually mark your availability and instantly find the perfect time to meet, without the endless back-and-forth messages, polls, or creating yet another account.
 
 ## Features
 
@@ -50,7 +50,7 @@ Issho (一緒) means "together" in Japanese - and that's exactly what this app i
 ### Project Structure
 
 ```txt
-Issho
+TimeMesh
 ├── app/                           # Next.js app router
 │   ├── api/                       # API routes
 │   │   ├── calendar/              # Calendar endpoints
@@ -84,8 +84,8 @@ Issho
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dulapahv/issho.git
-   cd issho
+   git clone https://github.com/kunaldasxv/TimeMesh.git
+   cd TimeMesh
    ```
 
 2. Install dependencies:
@@ -198,10 +198,10 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE](/LICEN
 
 ## Author
 
-**Dulapah Vibulsanti**
+**Kunal Das**
 
-- Website: [dulapahv.dev](https://dulapahv.dev)
-- GitHub: [@dulapahv](https://github.com/dulapahv)
+- Website: [kunaldasxv.dev](https://kunaldasxv.dev)
+- GitHub: [@kunaldasxv](https://github.com/kunaldasxv)
 
 ## Acknowledgments
 
@@ -212,4 +212,4 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE](/LICEN
 
 ## Support
 
-For support, please [open an issue](https://github.com/dulapahv/Issho/issues) or contact me at [dulapahv.dev/contact](https://dulapahv.dev/contact).
+For support, please [open an issue](https://github.com/kunaldasxv/TimeMesh/issues) or contact me at [kunaldasxv.dev/contact](https://kunaldasxv.dev/contact).

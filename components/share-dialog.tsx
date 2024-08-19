@@ -53,7 +53,7 @@ export function ShareDialog({
 
   const calendarUrl = `${window.location.origin}/calendar/${calendarId}?pin=${pin}`;
 
-  const shareMessage = `📅 Join my calendar on Issho!
+  const shareMessage = `📅 Join my calendar on TimeMesh!
 
 🔗 Invite URL: ${calendarUrl}
 

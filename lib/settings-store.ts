@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const STORAGE_KEY = "issho-settings";
+const STORAGE_KEY = "TimeMesh-settings";
 
 interface SettingsState {
   timeFormat: "12h" | "24h";
