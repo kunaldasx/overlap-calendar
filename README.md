@@ -1,22 +1,16 @@
-# TimeMesh: Plan with friends, faster
+# Overlap: Plan with friends, faster
 
 <div align="center">
-  <a href="https://TimeMesh.kunaldasxv.dev/">
+  <a href="https://overlap-calendar.vercel.app/">
     <img src="public/cover.png" width="630" alt="codex cover image"/>
   </a>
 </div>
 
 <br />
 
-<div align="center">
-  <a href="https://github.com/kunaldasxv/TimeMesh/issues"><img src="https://img.shields.io/github/issues/kunaldasxv/TimeMesh.svg?style=flat" />
-</div>
+✨ **Try now at [overlap-calendar.vercel.app](https://overlap-calendar.vercel.app)**
 
-<br />
-
-✨ **Try now at [TimeMesh.kunaldasxv.dev](https://TimeMesh.kunaldasxv.dev)**
-
-TimeMesh is a real-time collaborative calendar that lets you and your friends visually mark your availability and instantly find the perfect time to meet, without the endless back-and-forth messages, polls, or creating yet another account.
+Overlap is a real-time collaborative calendar that lets you and your friends visually mark your availability and instantly find the perfect time to meet, without the endless back-and-forth messages, polls, or creating yet another account.
 
 ## Features
 
@@ -50,7 +44,7 @@ TimeMesh is a real-time collaborative calendar that lets you and your friends vi
 ### Project Structure
 
 ```txt
-TimeMesh
+Overlap
 ├── app/                           # Next.js app router
 │   ├── api/                       # API routes
 │   │   ├── calendar/              # Calendar endpoints
@@ -84,8 +78,8 @@ TimeMesh
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/kunaldasxv/TimeMesh.git
-   cd TimeMesh
+   git clone https://github.com/kunaldasx/overlap-calendar.git
+   cd Overlap
    ```
 
 2. Install dependencies:
@@ -200,8 +194,8 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE](/LICEN
 
 **Kunal Das**
 
-- Website: [kunaldasxv.dev](https://kunaldasxv.dev)
-- GitHub: [@kunaldasxv](https://github.com/kunaldasxv)
+- Website: [kunaldasx.vercel.app](https://kunaldasx.vercel.app)
+- GitHub: [@kunaldasx](https://github.com/kunaldasx)
 
 ## Acknowledgments
 
@@ -212,4 +206,4 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE](/LICEN
 
 ## Support
 
-For support, please [open an issue](https://github.com/kunaldasxv/TimeMesh/issues) or contact me at [kunaldasxv.dev/contact](https://kunaldasxv.dev/contact).
+For support, please [open an issue](https://github.com/kunaldasx/overlap-calendar/issues) or contact me at [kunaldasx.vercel.app/contact](https://kunaldasx.vercel.app/contact).

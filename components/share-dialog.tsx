@@ -53,7 +53,7 @@ export function ShareDialog({
 
   const calendarUrl = `${window.location.origin}/calendar/${calendarId}?pin=${pin}`;
 
-  const shareMessage = `📅 Join my calendar on TimeMesh!
+  const shareMessage = `📅 Join my calendar on Overlap!
 
 🔗 Invite URL: ${calendarUrl}
 

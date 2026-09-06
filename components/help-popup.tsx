@@ -48,7 +48,7 @@ export function HelpPopup() {
             onClick={() => {
               setIsPopoverOpen(false);
               window.open(
-                "https://github.com/kunaldasxv/TimeMesh/blob/main/README.md",
+                "https://github.com/kunaldasx/overlap-calendar/blob/main/README.md",
                 "_blank"
               );
             }}
@@ -61,7 +61,7 @@ export function HelpPopup() {
             className="justify-start rounded-sm"
             onClick={() => {
               setIsPopoverOpen(false);
-              window.open("https://github.com/kunaldasxv/TimeMesh", "_blank");
+              window.open("https://github.com/kunaldasx/overlap-calendar", "_blank");
             }}
             variant="ghost"
           >
@@ -72,11 +72,11 @@ export function HelpPopup() {
             With 💕 from{" "}
             <Link
               className="underline"
-              href="https://kunaldasxv.dev"
+              href="https://kunaldasx.vercel.app"
               rel="noreferrer"
               target="_blank"
             >
-              kunaldasxv
+              kunaldasx
             </Link>
           </p>
         </div>

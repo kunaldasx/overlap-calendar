@@ -6,7 +6,6 @@ import {
   SparkleIcon,
   UserPlusIcon,
 } from "@phosphor-icons/react";
-// biome-ignore lint/performance/noNamespaceImport: Radix UI Form uses namespace pattern
 import * as Form from "@radix-ui/react-form";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -124,7 +123,7 @@ export function WelcomeScreen() {
           <div className="mb-8 lg:mb-12">
             <div className="mb-6">
               <h1 className="bg-linear-to-r from-primary to-primary/60 bg-clip-text font-bold text-4xl text-transparent lg:text-5xl">
-                TimeMesh
+                Overlap
               </h1>
               <p className="mt-3 text-lg text-muted-foreground">
                 Plan with friends faster — mark availability and find the best

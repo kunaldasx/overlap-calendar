@@ -4,15 +4,15 @@ export const IS_DEV_ENV =
   process.env.NODE_ENV === "development";
 export const BASE_URL = IS_DEV_ENV
   ? "http://localhost:3000"
-  : "https://TimeMesh.kunaldasxv.dev";
+  : "https://overlap-calendar.vercel.app";
 
-export const NAME = "TimeMesh";
+export const NAME = "Overlap";
 export const DESCRIPTION =
   "Plan with friends, faster — mark availability and find the best time together, no signup required.";
 export const AUTHOR_NAME = "Kunal Das";
-export const AUTHOR_BASE_URL = "https://kunaldasxv.dev";
-export const AUTHOR_TWITTER_HANDLE = "@kunaldasxv";
-export const CONTACT_URL = "https://kunaldasxv.dev/contact";
+export const AUTHOR_BASE_URL = "https://kunaldasx.vercel.app";
+export const AUTHOR_TWITTER_HANDLE = "@kunaldasx";
+export const CONTACT_URL = "https://kunaldasx.vercel.app/contact";
 
 // Validation limits
 export const VALIDATION = {
