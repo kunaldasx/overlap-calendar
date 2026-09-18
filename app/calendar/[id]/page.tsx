@@ -434,7 +434,7 @@ export default function CalendarPage() {
       }}
     >
       <div
-        className="flex animate-fade-in flex-col gap-3 p-4 sm:gap-4 lg:h-screen"
+        className="flex min-h-screen animate-fade-in flex-col gap-3 p-4 sm:gap-4 lg:h-screen lg:min-h-0 lg:overflow-hidden"
         ref={bodyRef}
       >
         <FloatingControls
@@ -444,8 +444,8 @@ export default function CalendarPage() {
 
         <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden sm:gap-4 lg:flex-row">
           {/* Metrics panel - always visible */}
-          <div className="order-2 shrink-0 lg:order-1 lg:w-80 xl:w-96">
-            <div className="h-full overflow-y-auto">
+          <div className="order-2 min-h-0 shrink-0 lg:order-1 lg:w-80 xl:w-96">
+            <div className="h-full overflow-y-auto pr-2">
               <AvailabilityMetrics events={events} />
             </div>
           </div>

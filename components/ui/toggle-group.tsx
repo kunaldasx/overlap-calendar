@@ -26,7 +26,7 @@ function ToggleGroup({
   return (
     <ToggleGroupPrimitive.Root
       className={cn(
-        "group/toggle-group flex w-fit items-center rounded-md data-[variant=outline]:shadow-xs",
+        "group/toggle-group flex w-fit items-center gap-1 rounded-full border border-border bg-[rgba(255,255,255,0.42)] p-1 shadow-sm backdrop-blur-sm dark:bg-[rgba(255,255,255,0.04)] data-[variant=outline]:shadow-xs",
         className
       )}
       data-size={size}
@@ -58,7 +58,7 @@ function ToggleGroupItem({
           variant: context.variant || variant,
           size: context.size || size,
         }),
-        "min-w-0 flex-1 shrink-0 rounded-none shadow-none first:rounded-l-md last:rounded-r-md focus:z-10 focus-visible:z-10 data-[variant=outline]:border-l-0 data-[variant=outline]:first:border-l",
+        "min-w-0 flex-1 shrink-0 rounded-full border-0 shadow-none transition-all duration-200 hover:bg-[var(--surface-muted)] data-[state=on]:bg-[linear-gradient(135deg,var(--primary),#cfe5ff)] data-[state=on]:text-[var(--primary-foreground)] data-[state=on]:shadow-[0_10px_18px_rgba(129,119,196,0.15)] focus:z-10 focus-visible:z-10",
         className
       )}
       data-size={context.size || size}

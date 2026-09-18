@@ -12,7 +12,7 @@ import { HelpPopup } from "@/components/help-popup";
 import { SettingsDialog } from "@/components/settings-dialog";
 import { Spinner } from "@/components/spinner";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Drawer,
   DrawerClose,
@@ -79,25 +79,21 @@ export function FloatingControls({
 
   return (
     <TooltipProvider>
-      {/* Desktop/Tablet Header Bar */}
-      <Card className="py-2">
-        <CardContent className="flex flex-col flex-wrap gap-2 px-4 lg:flex-row lg:items-center">
-          {/* Calendar Name */}
+      <Card className="soft-card border-transparent bg-[rgba(255,255,255,0.72)] p-2 shadow-(--shadow-soft) backdrop-blur-xl dark:border-[rgba(176,192,224,0.18)] dark:bg-[rgba(15,23,36,0.74)] sm:p-3">
+        <div className="flex flex-col gap-3 px-2 py-1 sm:px-3 lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0 flex-1">
-            {/* Mobile: Always show button, editing handled by drawer */}
             {isMobile ? (
-              <Button onClick={handleNameClick} variant="ghost">
-                <span className="truncate font-medium text-base md:text-lg">
+              <Button onClick={handleNameClick} variant="ghost" className="h-auto justify-start gap-2 px-2 py-2 hover:bg-transparent">
+                <span className="max-w-[18rem] truncate text-left font-semibold text-lg text-foreground">
                   {calendarName}
                 </span>
-                <PencilSimpleIcon className="size-5 shrink-0 text-muted-foreground" />
+                <PencilSimpleIcon className="size-4 text-muted-foreground" />
               </Button>
-            ) : // biome-ignore lint/style/noNestedTernary: Mobile/Desktop conditional rendering pattern
-            isEditingName ? (
-              <div className="flex max-w-sm items-center gap-x-2">
+            ) : isEditingName ? (
+              <div className="flex max-w-md items-center gap-2">
                 <Input
                   autoFocus
-                  className="h-8 data-invalid:border-destructive"
+                  className="h-10 rounded-xl border border-border bg-white/80 shadow-sm dark:border-[rgba(176,192,224,0.18)] dark:bg-[rgba(11,16,27,0.9)] dark:text-foreground"
                   disabled={isSavingName}
                   onChange={(e) => setTempName(e.target.value)}
                   onKeyDown={(e) => {
@@ -110,54 +106,35 @@ export function FloatingControls({
                   }}
                   value={tempName}
                 />
-                <div className="flex">
-                  <Button
-                    className="size-8 p-0"
-                    disabled={isSavingName}
-                    onClick={handleNameSubmit}
-                    size="sm"
-                    variant="ghost"
-                  >
-                    {isSavingName ? (
-                      <Spinner size="sm" />
-                    ) : (
-                      <CheckIcon className="size-5" />
-                    )}
+                <div className="flex items-center gap-1">
+                  <Button className="h-9 w-9 p-0" disabled={isSavingName} onClick={handleNameSubmit} size="icon" variant="secondary">
+                    {isSavingName ? <Spinner size="sm" /> : <CheckIcon className="size-4" />}
                   </Button>
-                  <Button
-                    className="size-8 p-0"
-                    disabled={isSavingName}
-                    onClick={handleNameCancel}
-                    size="sm"
-                    variant="ghost"
-                  >
-                    <XIcon className="size-5" />
+                  <Button className="h-9 w-9 p-0" disabled={isSavingName} onClick={handleNameCancel} size="icon" variant="ghost">
+                    <XIcon className="size-4" />
                   </Button>
                 </div>
               </div>
             ) : (
-              <Button onClick={handleNameClick} variant="ghost">
-                <span className="max-w-44 truncate font-medium text-base sm:max-w-64 md:text-lg xl:max-w-96">
+              <Button onClick={handleNameClick} variant="ghost" className="h-auto justify-start gap-2 px-2 py-2 hover:bg-transparent">
+                <span className="max-w-[20rem] truncate text-left font-semibold text-lg text-foreground sm:max-w-md lg:max-w-lg">
                   {calendarName}
                 </span>
-                <PencilSimpleIcon className="size-5 shrink-0 text-muted-foreground" />
+                <PencilSimpleIcon className="size-4 text-muted-foreground" />
               </Button>
             )}
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {/* Mode Toggle - Responsive */}
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end">
             <div className="flex flex-wrap items-center gap-2" id="tour-step-1">
-              {/* Helper text - hidden on smaller tablets */}
-              <span className="order-2 inline text-muted-foreground text-xs sm:order-1">
+              <span className="hidden text-[11px] uppercase tracking-[0.12em] text-muted-foreground sm:inline-block">
                 {isDrawMode
-                  ? `${isMobile ? "Tap, hold," : "Click"} and drag to mark available`
-                  : `${isMobile ? "Tap" : "Click"} on events to delete`}
+                  ? `${isMobile ? "Tap, hold," : "Click"} & drag to mark available`
+                  : `${isMobile ? "Tap" : "Click"} events to delete`}
               </span>
 
-              {/* Desktop view (md+): Full toggle */}
               <ToggleGroup
-                className="order-1 flex sm:order-2"
+                className="justify-center"
                 onValueChange={(value) => {
                   if (value) {
                     setDrawMode(value === "draw");
@@ -167,54 +144,29 @@ export function FloatingControls({
                 value={isDrawMode ? "draw" : "delete"}
                 variant="outline"
               >
-                <ToggleGroupItem
-                  aria-label="Mark available"
-                  className="data-[state=on]:bg-green-500 data-[state=on]:text-white"
-                  value="draw"
-                >
-                  <CheckIcon className="size-5" />
+                <ToggleGroupItem aria-label="Mark available" value="draw">
+                  <CheckIcon className="size-4" />
                   Mark Available
                 </ToggleGroupItem>
-                <ToggleGroupItem
-                  aria-label="Delete available"
-                  className="data-[state=on]:bg-red-500 data-[state=on]:text-white"
-                  value="delete"
-                >
-                  <XIcon className="size-5" />
+                <ToggleGroupItem aria-label="Delete available" value="delete">
+                  <XIcon className="size-4" />
                   Delete Available
                 </ToggleGroupItem>
               </ToggleGroup>
             </div>
 
-            {/* Actions - Responsive */}
-            <div className="flex gap-1 md:gap-2">
-              {/* Tablet: Icon only, Desktop: With text */}
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button
-                    className="w-auto px-3"
-                    id="tour-step-4"
-                    onClick={onShareClick}
-                    size="icon"
-                    variant="outline"
-                  >
-                    <ShareIcon className="size-5" />
-                    Share
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent className="md:hidden">
-                  Share Calendar
-                </TooltipContent>
-              </Tooltip>
-
+            <div className="flex items-center gap-2 self-end sm:self-auto">
+              <Button onClick={onShareClick} variant="secondary" className="gap-2" id="tour-step-4">
+                <ShareIcon className="size-4" />
+                Share
+              </Button>
               <SettingsDialog />
               <HelpPopup />
             </div>
           </div>
-        </CardContent>
+        </div>
       </Card>
 
-      {/* Mobile Name Edit Drawer - Only renders on mobile devices */}
       {isMobile && (
         <Drawer onOpenChange={setIsEditingName} open={isEditingName}>
           <DrawerContent>

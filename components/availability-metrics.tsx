@@ -684,7 +684,7 @@ export function AvailabilityMetrics({ events }: AvailabilityMetricsProps) {
     : Math.ceil((metrics.totalCalendarSlots * SLOT_MINUTES) / (24 * 60));
 
   return (
-    <div className="space-y-4 overflow-y-auto">
+    <div className="space-y-4">
       {/* Main Overview Card */}
       <Card id="tour-step-3">
         <CardHeader>

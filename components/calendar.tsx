@@ -234,7 +234,6 @@ export function Calendar({ onCreateEvent, onDeleteEvent }: CalendarProps) {
   // Calendar components customization
   const components = useMemo(
     () => ({
-      // biome-ignore lint/suspicious/noExplicitAny: react-big-calendar toolbar props type is complex
       toolbar: (props: any) => (
         <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2">
           <ToggleGroup type="single" variant="outline">
@@ -285,8 +284,8 @@ export function Calendar({ onCreateEvent, onDeleteEvent }: CalendarProps) {
 
   return (
     <>
-      <Card className="flex-1 overflow-hidden" id="tour-step-2">
-        <CardContent className="h-full">
+      <Card className="min-h-0 flex-1 overflow-hidden" id="tour-step-2">
+        <CardContent className="min-h-0 flex-1 overflow-y-auto">
           <BigCalendar
             className={cn(
               "h-full min-h-160",
