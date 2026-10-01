@@ -8,7 +8,7 @@
 
 <br />
 
-✨ **Try now at [overlap-calendar.vercel.app](https://overlap-calendar.vercel.app)**
+✨ **Try now at [overlapcalendar.vercel.app](https://overlapcalendar.vercel.app)**
 
 Overlap is a real-time collaborative calendar that lets you and your friends visually mark your availability and instantly find the perfect time to meet, without the endless back-and-forth messages, polls, or creating yet another account.
 
